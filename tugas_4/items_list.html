@@ -1,0 +1,6 @@
+{% for item in items %}
+    <p>{{ item.name }} ({{ item.amount }})</p>
+    <a href="{% url 'adjust_amount' item.id 'add' %}">Tambah Stok</a>
+    <a href="{% url 'adjust_amount' item.id 'subtract' %}">Kurangi Stok</a>
+    <a href="{% url 'delete_item' item.id %}">Hapus</a>
+{% endfor %}
