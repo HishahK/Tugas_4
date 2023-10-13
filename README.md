@@ -152,4 +152,44 @@ HTML5 memperkenalkan sejumlah tag baru yang meningkatkan semantik dan fungsional
 3. **Kode HTML5**: Mengimplementasikan tag HTML5 untuk struktur konten yang lebih semantik dan aksesibilitas yang lebih baik.
 4. **Implementasi Bonus**: Menambahkan kelas CSS kustom ke elemen terakhir dengan JavaScript atau logika templating untuk memenuhi kriteria bonus.
 
+# Tugas_6
+
+## 1. Perbedaan Asynchronous dan Synchronous Programming
+
+**Synchronous Programming** adalah model pemrograman di mana operasi-operasi dieksekusi secara berurutan dan harus menunggu operasi sebelumnya selesai terlebih dahulu sebelum memulai operasi berikutnya. Ini menciptakan kemungkinan situasi "blocking" di mana sistem menjadi tidak responsif selama operasi tersebut berlangsung.
+
+Di sisi lain, **Asynchronous Programming** memungkinkan eksekusi operasi tanpa menunggu operasi sebelumnya untuk menyelesaikan, sehingga tidak terjadi "blocking". Dalam konteks web, ini sangat berguna untuk melakukan operasi seperti mengambil data dari server tanpa perlu memuat ulang halaman (seperti pada penggunaan AJAX).
+
+## 2. Paradigma Event-Driven Programming
+
+**Event-Driven Programming** adalah paradigma di mana alur program ditentukan oleh peristiwa seperti input pengguna atau data yang diterima dari sumber eksternal. Pada proyek ini, ketika pengguna mengklik tombol untuk mengirim formulir, misalnya, sebuah "event" diinisiasi, yang kemudian memicu fungsi yang terkait dengan event tersebut untuk berjalan, seperti pengambilan atau pengiriman data menggunakan AJAX, tanpa perlu memuat ulang halaman secara keseluruhan.
+
+## 3. Penerapan Asynchronous Programming pada AJAX
+
+Asynchronous programming dalam konteks AJAX memungkinkan pengambilan atau pengiriman data ke server setelah halaman web telah dimuat, sehingga pengguna dapat melihat update pada halaman (seperti mendapatkan data baru atau memperbarui UI) tanpa harus memuat ulang seluruh halaman. Penggunaan `.ajax()` dari jQuery atau `fetch()` dalam JavaScript murni adalah contoh pemrograman asinkron, karena kita menunggu data yang akan diambil atau dikirim tanpa menghentikan eksekusi fungsi lain pada sementara waktu.
+
+## 4. Perbandingan Fetch API dan jQuery AJAX
+
+Meskipun **jQuery AJAX** telah menjadi standar untuk pengembangan web selama beberapa tahun dan menyediakan sintaks yang relatif sederhana untuk melakukan request HTTP, **Fetch API** menawarkan pendekatan modern dengan sintaks yang juga bersih dan mudah dipahami, serta lebih fleksibel dan memberikan kontrol lebih terhadap request HTTP dibandingkan dengan jQuery. Fetch API adalah teknologi bawaan browser dan tidak memerlukan library eksternal, menjadikannya pilihan yang ringan dan efisien. Oleh karena itu, penggunaan Fetch API mungkin lebih disukai untuk proyek-proyek baru, meskipun keputusan akhir dapat tergantung pada kebutuhan spesifik proyek.
+
+## 5. Implementasi Checklist
+
+1. **Setup Projek:**
+   - Membuat model dan view dasar untuk item dan user.
+   - Menyusun routing dasar menggunakan Django URL patterns.
+
+2. **Integrasi AJAX:**
+   - Menambahkan endpoint untuk menyediakan data sebagai API dengan menggunakan Django REST Framework atau JSONResponse.
+   - Menuliskan fungsi JavaScript untuk mengambil dan menampilkan data dari endpoint API menggunakan AJAX.
+
+3. **Pembuatan Item dengan AJAX:**
+   - Menambahkan form dan modal menggunakan HTML dan Bootstrap.
+   - Menulis fungsi JavaScript untuk mengambil data dari form dan mengirimkannya ke server menggunakan AJAX POST request.
+   - Mengupdate view dan endpoint di Django untuk menerima data dan menyimpan item baru.
+
+4. **Menggunakan `collectstatic`:**
+   - Menyimpan kode JavaScript dalam direktori static dan menjalankan `python manage.py collectstatic` untuk mengumpulkan file-file static untuk produksi.
+
+5. **Pengujian:**
+   - Melakukan pengujian manual dan/atau otomatis untuk memastikan bahwa semua fungsi bekerja seperti yang diharapkan, baik pada tingkat front-end maupun back-end.
 
